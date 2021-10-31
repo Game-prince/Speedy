@@ -16,7 +16,7 @@ public class obstacleGenerator : MonoBehaviour
     // refrencing to the ground
     public Transform road;
 
-    GameObject[] obstacles;
+    List<GameObject> obstacles = new List<GameObject>();
     int numbers = 0;
 
     
@@ -41,20 +41,20 @@ public class obstacleGenerator : MonoBehaviour
         if (timePassed == 0)
         {
             int pos = Random.Range(0, 3);
-            Instantiate(obstacle, new Vector3(lanes[pos], 0.65f, player.position.z + 30), Quaternion.identity);
+            Instantiate(obstacle, new Vector3(lanes[pos], 0.15f, player.position.z + 30), Quaternion.identity);
             timePassed = 50;
-            obstacles.append(obstacle);
+            // obstacles.append(obstacle);
             numbers++;
         }
 
         // deleting the obstacle if it is out of the screen
-        for(int i = 0; i < numbers; i++)
-        {
-            if (obstacles[i].transform.position.z < player.position.z - 30)
-            {
-                Destroy(obstacle);
-            }
-        }
+        // for(int i = 0; i < numbers; i++)
+        // {
+        //     if (obstacles[i].transform.position.z < player.position.z - 30)
+        //     {
+        //         Destroy(obstacle);
+        //     }
+        // }
 
         timePassed--;
     }

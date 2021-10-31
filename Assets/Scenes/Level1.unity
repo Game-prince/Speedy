@@ -304,6 +304,7 @@ GameObject:
   - component: {fileID: 963194228}
   - component: {fileID: 963194227}
   - component: {fileID: 963194226}
+  - component: {fileID: 963194229}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -370,12 +371,26 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 500, y: 2.5, z: -5}
+  m_LocalPosition: {x: 500, y: 2.5, z: -3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &963194229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 963194225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ffc0465e291d0341bf66d7339fc4085, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  car: {fileID: 1893611721}
+  offset: {x: 0, y: 1.85, z: -4}
 --- !u!1 &1224779454
 GameObject:
   m_ObjectHideFlags: 0
@@ -388,8 +403,9 @@ GameObject:
   - component: {fileID: 1224779458}
   - component: {fileID: 1224779457}
   - component: {fileID: 1224779456}
+  - component: {fileID: 1224779459}
   m_Layer: 0
-  m_Name: raod
+  m_Name: road
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -404,7 +420,7 @@ Transform:
   m_GameObject: {fileID: 1224779454}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 500, y: 0.1, z: 500}
-  m_LocalScale: {x: 5, y: 0.1, z: 1000}
+  m_LocalScale: {x: 10, y: 0.1, z: 1000}
   m_Children: []
   m_Father: {fileID: 424529270}
   m_RootOrder: 0
@@ -416,7 +432,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1224779454}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 08060a6b1ebb69b4aab1599228c51d8e, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -471,6 +487,21 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1224779454}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1224779459
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1224779454}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2a23f4477da3a145844b9369374c0d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  obstacle: {fileID: 5770825322416996820, guid: 11ccca53a47c98c48a267c62e8cec1f2, type: 3}
+  player: {fileID: 1893611721}
+  road: {fileID: 1224779455}
 --- !u!1 &1893611716
 GameObject:
   m_ObjectHideFlags: 0
@@ -484,6 +515,7 @@ GameObject:
   - component: {fileID: 1893611719}
   - component: {fileID: 1893611718}
   - component: {fileID: 1893611717}
+  - component: {fileID: 1893611722}
   m_Layer: 0
   m_Name: car
   m_TagString: Untagged
@@ -577,9 +609,24 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1893611716}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 500.46466, y: 0.6500002, z: 1.0169075}
+  m_LocalPosition: {x: 500, y: 0.6500002, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1893611722
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1893611716}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e534df16f9191564ebf97e81188f0844, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  car: {fileID: 1893611721}
+  forwardForce: 2000
+  sidewaysForce: 1500

@@ -29,20 +29,14 @@ public class obstacleGenerator : MonoBehaviour
         // Getting width of ground
         float roadWidth = road.GetComponent<Renderer>().bounds.size.x;
 
-        float[] lanes = new float[3];
-
-        for (int i = 0; i<3; i++)
-        {
-            float l = road.position.x - roadWidth / 2 + (i+1) *roadWidth / 3 - obstacleWidth / 2;
-            lanes[i] = l;
-        }
+        float[] lanes = new float[]{490, 500, 510};
 
         // if timePassed is equal to 0 we will generate the obstacle
         if (timePassed == 0)
         {
             int pos = Random.Range(0, 3);
-            Instantiate(obstacle, new Vector3(lanes[pos], 0.15f, player.position.z + 30), Quaternion.identity);
-            timePassed = 50;
+            Instantiate(obstacle, new Vector3(lanes[pos], 0.15f, player.position.z + 100), Quaternion.identity);
+            timePassed = 30;
             // obstacles.append(obstacle);
             numbers++;
         }

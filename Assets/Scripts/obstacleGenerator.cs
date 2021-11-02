@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class obstacleGenerator : MonoBehaviour
@@ -15,10 +13,6 @@ public class obstacleGenerator : MonoBehaviour
 
     // refrencing to the ground
     public Transform road;
-
-    List<GameObject> obstacles = new List<GameObject>();
-    int numbers = 0;
-
     
     // update is called once per frame
     void FixedUpdate()
@@ -37,18 +31,7 @@ public class obstacleGenerator : MonoBehaviour
             int pos = Random.Range(0, 3);
             Instantiate(obstacle, new Vector3(lanes[pos], 0.15f, player.position.z + 100), Quaternion.identity);
             timePassed = 30;
-            // obstacles.append(obstacle);
-            numbers++;
         }
-
-        // deleting the obstacle if it is out of the screen
-        // for(int i = 0; i < numbers; i++)
-        // {
-        //     if (obstacles[i].transform.position.z < player.position.z - 30)
-        //     {
-        //         Destroy(obstacle);
-        //     }
-        // }
 
         timePassed--;
     }

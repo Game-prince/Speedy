@@ -7,7 +7,7 @@ public class collision : MonoBehaviour
     {
         if (collision.gameObject.tag == "obstacles")
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            SceneManager.LoadScene("gameOver");
         }
     }
 }

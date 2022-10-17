@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class followcar : MonoBehaviour
+public class Followcar : MonoBehaviour
 {
     public Transform car;
     public Vector3 offset;

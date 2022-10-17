@@ -1,9 +1,9 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class restartbtn : MonoBehaviour
+public class Restartbtn : MonoBehaviour
 {
-    public void restartGame()
+    public void RestartGame()
     {
         SceneManager.LoadScene(1);
     }

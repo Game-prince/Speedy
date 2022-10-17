@@ -1,8 +1,9 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class nextlevel : MonoBehaviour
+public class Nextlevel : MonoBehaviour
 {
+    public int currentlevel;
     public void NextLevel()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);

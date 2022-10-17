@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class score : MonoBehaviour
+public class Score : MonoBehaviour
 {
     // reference to the text component
     public Text scoreText;
@@ -10,6 +10,6 @@ public class score : MonoBehaviour
     void FixedUpdate()
     {
         // Add 1 to the score
-        scoreText.text = (transform.position.z - 5).ToString("0");
+        scoreText.text = "score : " + (transform.position.z - 5).ToString("0");
     }
 }

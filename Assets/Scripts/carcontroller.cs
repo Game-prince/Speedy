@@ -1,16 +1,17 @@
 using UnityEngine;
 
-public class carcontroller : MonoBehaviour
+public class Carcontroller : MonoBehaviour
 {
-    public float horizontalForce  = 500f;
+    public float horizontalForce = 500f;
     public float sideWaysForce = 1000f;
 
     // getting a reference to the car
     public Rigidbody car;
 
     // updates once per frame
-    void FixedUpdate() {
-        
+    void FixedUpdate()
+    {
+
         // applying force on car
         car.AddForce(0, 0, horizontalForce);
 

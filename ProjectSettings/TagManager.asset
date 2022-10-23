@@ -6,6 +6,7 @@ TagManager:
   tags:
   - obstacles
   - score_enhancers
+  - Ground
   layers:
   - Default
   - TransparentFX
